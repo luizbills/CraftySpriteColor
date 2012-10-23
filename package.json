@@ -1,0 +1,32 @@
+{
+    "name": "SpriteColor",
+    "version": "1.0",
+    "title": "SpriteColor",
+    "author": {
+	"name": "Luiz Paulo Bills",
+        "url": "https://github.com/luizpfbrandao"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        },
+        {
+            "type": "GPL",
+            "url": "http://www.opensource.org/licenses/gpl-license.php"
+        }
+    ],
+    "description": "A Crafty component to change or apply color to a sprite.",
+    "keywords": [
+        "spritecolor",
+        "library",
+        "component",
+        "crafty",
+        "javascript"
+    ],
+    "jsfiddle" : "http://jsfiddle.net/nG4mZ/7/embedded", 
+    "homepage": "https://github.com/luizpfbrandao/CraftySpriteColor",
+    "files": [
+		"src/SpriteColor.js"
+    ]
+}
