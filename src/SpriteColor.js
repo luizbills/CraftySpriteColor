@@ -28,6 +28,7 @@ Crafty.c("SpriteColor", {
 	*/
 	spriteColor: function(hexcolor, strength){
 		this._color = Crafty.toRGB(hexcolor,strength);
+		this.trigger("Change");
 		return this;
 	},
 	_drawSpriteColor: function(){
