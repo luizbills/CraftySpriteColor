@@ -27,6 +27,6 @@
     "jsfiddle" : "http://jsfiddle.net/nG4mZ/9/embedded", 
     "homepage": "https://github.com/luizpfbrandao/CraftySpriteColor",
     "files": [
-		"src/SpriteColor.js"
+	"src/SpriteColor.js"
     ]
 }
