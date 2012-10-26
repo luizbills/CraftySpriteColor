@@ -22,8 +22,8 @@ Crafty.c("SpriteColor", {
 	* ~~~
 	* Crafty.sprite(16, "http://craftyjs.com/demos/tutorial/sprite.png", {player:[0,3]});
 	*
-    * Crafty.e("2D, Canvas, player, SpriteColor")
-    * 	.spriteColor("#FF0000",0.5); // red with 50% transparency
+	* Crafty.e("2D, Canvas, player, SpriteColor")
+	* 	.spriteColor("#FF0000",0.5); // red with 50% transparency
 	* ~~~
 	*/
 	spriteColor: function(hexcolor, strength){
