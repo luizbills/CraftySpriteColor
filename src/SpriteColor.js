@@ -1,23 +1,42 @@
-﻿// create a canvas
-var hiddenCanvas = document.createElement('canvas'),
-// get the context 2d of this canvas
-hiddenBuffer = hiddenCanvas.getContext("2d");
-// hide it 
-hiddenCanvas.style.display = "none";
-document.getElementById("cr-stage").appendChild(hiddenCanvas);
-
-// SpriteColor component
+/**@
+* #SpriteColor
+* @category Graphics
+* Similar to Color and Tint, but it respects the format of sprite.
+*
+* *Note: Only works for Canvas*
+*/
 Crafty.c("SpriteColor", {
-	_spriteColor: "rgba(0, 0, 0, 0)",
-	spriteColor: function(color){
-		this._spriteColor = color;
+	_color: "rgba(0,0,0,0)",
+	/**@
+	* #.spriteColor
+	* @comp SpriteColor
+	* @trigger Change - when the color is applied
+	* @sign public this .spriteColor(String hexcolor, Number strength)
+	* @param color - The color in HEXADECIMAL
+	* @param strength - Level of opacity
+	*
+	* The argument must be a color readable depending on which browser you
+	* choose to support. IE 8 and below doesn't support the rgb() syntax.
+	* 
+	* @example
+	* ~~~
+	* Crafty.sprite(16, "http://craftyjs.com/demos/tutorial/sprite.png", {player:[0,3]});
+	*
+    * Crafty.e("2D, Canvas, player, SpriteColor")
+    * 	.spriteColor("#FF0000",0.5); // red with 50% transparency
+	* ~~~
+	*/
+	spriteColor: function(hexcolor, strength){
+		this._color = Crafty.toRGB(hexcolor,strength);
 		return this;
 	},
 	_drawSpriteColor: function(){
 		// sprite coordinates
-		var co = this.__coord;
+		var co = this.__coord,
+		// context 2d of hidden canvas
+		ctx = this._spriteColorCanvas.getContext('2d');
 		// draw the sprite on hidden canvas
-		hiddenBuffer.drawImage(this.img, //image element
+		ctx.drawImage(this.img, //image element
 		co[0], //x position on sprite
 		co[1], //y position on sprite
 		co[2], //width on sprite
@@ -26,20 +45,28 @@ Crafty.c("SpriteColor", {
 		this._h //height on canvas
 		);
 		// Draw a rectangle over the sprite using a overlay
-		hiddenBuffer.save();
-		hiddenBuffer.globalCompositeOperation = "source-in";
+		ctx.save();
+		ctx.globalCompositeOperation = "source-in";
 		// paint the rectangle with a color
-		hiddenBuffer.fillStyle = this._spriteColor;
-		hiddenBuffer.fillRect(0, 0, this._w, this._h);
-		hiddenBuffer.restore();
+		ctx.fillStyle = this._color;
+		ctx.fillRect(0, 0, this._w, this._h);
+		ctx.restore();
 		// draw the hidden canvas on Crafty canvas
-		Crafty.canvas.context.drawImage(hiddenCanvas, this._x, this._y);
+		Crafty.canvas.context.drawImage(this._spriteColorCanvas, this._x, this._y);
 	},
 	init: function(){
+		this._spriteColorCanvas = document.getElementById('SpriteColorCanvas');
+		// creates a hidden canvas if its don't exists
+		if (!this._spriteColorCanvas){
+			this._spriteColorCanvas = document.createElement('canvas');
+			this._spriteColorCanvas.id = 'SpriteColorCanvas';
+			this._spriteColorCanvas.style.display = 'none';
+			this._spriteColorCanvas.style.zIndex = '1000';
+			Crafty.stage.elem.appendChild(this._spriteColorCanvas);
+		}
 		this.bind("Draw", this._drawSpriteColor);
 		this.bind("RemoveComponent", function(c) {
 			if (c == "SpriteColor") this.unbind("Draw", this._drawSpriteColor);
 		})
 	},
 });
-
