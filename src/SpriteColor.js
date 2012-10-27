@@ -59,11 +59,11 @@ Crafty.c("SpriteColor", {
 		this._spriteColorCanvas = document.getElementById('SpriteColorCanvas');
 		// creates a hidden canvas if its don't exists
 		if (!this._spriteColorCanvas){
-			this._spriteColorCanvas = document.createElement('canvas');
-			this._spriteColorCanvas.id = 'SpriteColorCanvas';
-			this._spriteColorCanvas.style.display = 'none';
-			this._spriteColorCanvas.style.zIndex = '1000';
-			Crafty.stage.elem.appendChild(this._spriteColorCanvas);
+			var c = document.createElement('canvas');
+			c.id = 'SpriteColorCanvas';
+			c.style.display = 'none';
+			c.style.zIndex = '1000';
+			Crafty.stage.elem.appendChild(c);
 		}
 		this.bind("Draw", this._drawSpriteColor);
 		this.bind("RemoveComponent", function(c) {
