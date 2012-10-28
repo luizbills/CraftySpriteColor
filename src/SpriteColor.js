@@ -66,7 +66,8 @@ Crafty.c("SpriteColor", {
 			Crafty.stage.elem.appendChild(c);
 			this._spriteColorCanvas = c;
 		}
-		this.bind("Draw", this._drawSpriteColor)
+		this
+			.bind("Draw", this._drawSpriteColor)
 			.bind("RemoveComponent", function(c) {
 				if (c == "SpriteColor") this.unbind("Draw", this._drawSpriteColor);
 			});
