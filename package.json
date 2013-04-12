@@ -4,7 +4,7 @@
     "title": "SpriteColor",
     "author": {
 	"name": "Luiz Paulo Bills",
-        "url": "https://github.com/luizpfbrandao"
+        "url": "https://github.com/luizbills"
     },
     "licenses": [
         {
@@ -25,7 +25,7 @@
         "javascript"
     ],
     "jsfiddle" : "http://jsfiddle.net/nG4mZ/9/embedded", 
-    "homepage": "https://github.com/luizpfbrandao/CraftySpriteColor",
+    "homepage": "https://github.com/luizbills/CraftySpriteColor",
     "files": [
 	"src/SpriteColor.js"
     ]
