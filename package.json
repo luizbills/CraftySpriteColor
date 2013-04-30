@@ -1,32 +1,32 @@
 {
-    "name": "SpriteColor",
-    "version": "1.1.2",
-    "title": "SpriteColor",
-    "author": {
-	"name": "Luiz Paulo Bills",
-        "url": "https://github.com/luizbills"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://www.opensource.org/licenses/mit-license.php"
-        },
-        {
-            "type": "GPL",
-            "url": "http://www.opensource.org/licenses/gpl-license.php"
-        }
-    ],
-    "description": "A Crafty component to change or apply color to a sprite.",
-    "keywords": [
-        "spritecolor",
-        "library",
-        "component",
-        "crafty",
-        "javascript"
-    ],
-    "jsfiddle" : "http://jsfiddle.net/nG4mZ/9/embedded", 
-    "homepage": "https://github.com/luizbills/CraftySpriteColor",
-    "files": [
-	"src/SpriteColor.js"
-    ]
+	"name": "SpriteColor",
+	"version": "1.1.3",
+	"title": "SpriteColor",
+	"author": {
+		"name": "Luiz Paulo Bills",
+		"url": "https://github.com/luizbills"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/mit-license.php"
+		},
+		{
+			"type": "GPL",
+			"url": "http://www.opensource.org/licenses/gpl-license.php"
+		}
+	],
+	"description": "A Crafty component to change or apply color to a sprite.",
+	"keywords": [
+		"spritecolor",
+		"library",
+		"component",
+		"crafty",
+		"javascript"
+	],
+	"jsfiddle" : "http://jsfiddle.net/luizbills/ZegWr/embedded/result,js/", 
+	"homepage": "https://github.com/luizbills/CraftySpriteColor",
+	"files": [
+		"src/SpriteColor.js"
+	]
 }

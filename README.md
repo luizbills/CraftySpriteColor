@@ -1,7 +1,6 @@
 # SpriteColor for CraftyJS
 A CraftyJS component to change the color of a sprite. 
 Idea of this [topic](http://www.html5rocks.com/en/tutorials/casestudies/onslaught/).
-
 ***
 
 ##Demo
@@ -13,9 +12,7 @@ Crafty.modules({ SpriteColor: 'DEV' }, function () {
         .spriteColor("FF0000", 0.5) // red with 50% transparency
 });
 ```
-
 ***
 
 ##License
-
 Dual licensed under MIT and GPL.
