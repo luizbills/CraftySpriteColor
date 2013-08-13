@@ -5,10 +5,9 @@
 *
 * *Note: Only works for Canvas*
 */
-
-Crafty.spriteColorCanvas = (function() {
+;(function() {
 	var sc_canvas = document.createElement('canvas'), // create an hidden canvas
-		sc_ctx = canvas.getContext('2d'),
+		sc_ctx = sc_canvas.getContext('2d'),
 		sc_drawFunc;
 	
 	// draw callback
