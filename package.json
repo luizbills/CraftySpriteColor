@@ -1,6 +1,6 @@
 {
 	"name": "SpriteColor",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"title": "SpriteColor",
 	"author": {
 		"name": "Luiz Paulo Bills",
@@ -24,7 +24,7 @@
 		"crafty",
 		"javascript"
 	],
-	"jsfiddle" : "http://jsfiddle.net/luizbills/ZegWr/embedded/result,js/", 
+	"jsfiddle" : "http://jsfiddle.net/ZegWr/4/embedded/result,js/", 
 	"homepage": "https://github.com/luizbills/CraftySpriteColor",
 	"files": [
 		"src/SpriteColor.js"
