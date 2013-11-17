@@ -4,7 +4,8 @@ Idea of this [topic](http://www.html5rocks.com/en/tutorials/casestudies/onslaugh
 ***
 
 ##Demo
-http://jsfiddle.net/luizbills/ZegWr/12/
+
+http://jsfiddle.net/luizbills/ZegWr/13/
 ```javascript
 Crafty.sprite(16, "http://craftyjs.com/demos/tutorial/sprite.png", {player:[0,3]});
 
