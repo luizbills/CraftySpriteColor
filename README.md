@@ -1,5 +1,5 @@
 # SpriteColor for CraftyJS
-A CraftyJS component to change the color of a sprite. 
+A CraftyJS component to apply a color to a sprite. 
 Idea of this [topic](http://www.html5rocks.com/en/tutorials/casestudies/onslaught/).
 ***
 
